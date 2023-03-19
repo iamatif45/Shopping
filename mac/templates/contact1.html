@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            color:maroon;
+            background:url('https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg');
+        }
+
+        .navigation{
+            font-size: 20px;
+            display: flex;
+        }
+        li,a{
+            list-style: none;
+            padding: 20px 23px;
+            text-decoration:none;
+            color:maroon;
+            cursor:pointer;
+        }
+        h1{
+            font-size: 4rem;
+            font-style: italic;
+        }
+        p{
+            font-style: italic;
+            text-align: center;
+            font-size: 26px;
+        }
+        .item:hover{
+        color:navy;
+        }
+@media(max-width:830px){
+   li,a{
+   padding:8px 3px;
+   margin-left:2px;
+   margin-top:0px;
+   font-size:15px;
+   }
+   h1{
+     margin-top:-4rem;
+     text-align:center;
+     padding:0px 0px;
+     font-size:2rem;
+   }
+  p{
+  margin-top:0px;
+  }
+.navigation {
+    font-size: 20px;
+    display: flex;
+    margin-left: -10px;
+}
+}
+
+    </style>
+    <style>
+.third{
+text-align:center;
+margin-top:30px;
+margin-left:20px;
+}
+
+#contact{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 190px;
+    margin-left:-90px;
+    margin-top:-10x;
+}
+
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Mynerve', cursive;
+}
+
+
+#contact-box input,#contact-box textarea{
+    width:140%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+    </style>
+</head>
+
+<body>
+
+<header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="nav">
+                <a class="item" href="/">Home</a>
+                </li>
+                <li class="nav">
+                <a class="item" href="/shop" role="button">Shop</a>
+                </li>
+                <li class="nav">
+              <a class="item" href="/myapp" role="button">Blog</a>
+                </li>
+            <li class="nav">
+              <a class="item" href="/about1">About Us</a>
+            </li>
+                <li class="nav">
+                <a class="item" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+</header>
+
+<section id="contact">
+        <h1 class="third" id="contact-us">Contact Us</h1>
+        <div id="contact-box">
+            <form action="/contact1/" method="post"> {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="text" name="name" id="email" placeholder="Enter Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="tel" name="name" id="phone" placeholder="Enter Your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                    <button type="submit" class="btn btn-primary">submit</button>
+            </form>
+        </div>
+    </section>
+
+
+</body>
+</html>

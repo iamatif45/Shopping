@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to My Awesome Cart!</title>
+     <style>
+        body{
+            margin: 0;
+            padding: 0;
+            color:maroon;
+            background:url('https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg');
+        }
+        section{
+            height: 344px;
+            align-items: center;
+            margin: 3px 23px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        header::before{
+            content: "";
+            height: auto;
+            width: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.5;
+
+        }
+        .navigation{
+            font-size: 20px;
+            display: flex;
+        }
+        li,a{
+            list-style: none;
+            padding: 20px 23px;
+            text-decoration:none;
+            color:maroon;
+            cursor:pointer;
+        }
+        h1{
+            font-size: 4rem;
+            font-style: italic;
+        }
+        p{
+            font-style: italic;
+            text-align: center;
+            font-size: 26px;
+        }
+        .item:hover{
+        color:navy;
+        }
+@media(max-width:830px){
+   li,a{
+   padding:8px 3px;
+   margin-left:2px;
+   margin-top:0px;
+   font-size:15px;
+   }
+   h1{
+     margin-top:-4rem;
+     text-align:center;
+     padding:0px 0px;
+     font-size:2rem;
+   }
+  p{
+  margin-top:0px;
+  }
+.navigation {
+    font-size: 20px;
+    display: flex;
+    margin-left: -10px;
+}
+}
+</style>
+  </head>
+  <body>
+      <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="nav">
+                <a class="item">Home</a>
+                </li>
+                <li class="nav">
+                <a class="item" href="/shop" role="button">Shop</a>
+                </li>
+                <li class="nav">
+              <a class="item" href="/myapp" role="button">Blog</a>
+                </li>
+            <li class="nav">
+              <a class="item" href="/about1">About Us</a>
+            </li>
+                <li class="nav">
+                <a class="item" href="/contact1">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <h1>Welcome to My Awesome Cart</h1>
+            <p>This is a websites for people in which people can do both shopping and blogging. No need to use two website for blogging and shopping 2 in 1.</p>
+        </section>
+    </header>
+  </body>
+</html>
